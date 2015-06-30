@@ -1,6 +1,7 @@
 <?php
 $this->breadcrumbs=array(
-	'Items'=>array('index'),
+	//'Admin'=> array('Adminbycriteria','id'=>$barcode_id,'nama'=>$nama),
+        'Items'=>array('index'),
 	$model->serial_number,
 );
 

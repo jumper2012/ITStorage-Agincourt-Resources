@@ -1,10 +1,16 @@
-<?php $form=$this->beginWidget('booster.widgets.TbActiveForm',array(
-	'id'=>'produk-form',
-	'enableAjaxValidation'=>false,
-)); ?>
+
+
+<?php $form = $this->beginWidget(
+    'booster.widgets.TbActiveForm',
+    array(
+        'id' => 'verticalForm',
+    	'type' => 'horizontal',
+        'htmlOptions' => array('class' => 'well'), // for inset effect
+    )
+); ?>
 
 <p class="help-block">Fields with <span class="required">*</span> are required.</p>
-
+<br>
 <?php echo $form->errorSummary($model); ?>
 
 	<?php echo $form->textFieldGroup($model,'barcode_id',array('widgetOptions'=>array('htmlOptions'=>array('class'=>'span5')))); ?>

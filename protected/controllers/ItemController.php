@@ -122,6 +122,18 @@ class ItemController extends Controller {
         ));
     }
 
+    
+    
+    public function actionIndexByBarcode($barcode_id)
+	{
+        $model = new Item('searchByBarcode($id)');
+        $model->unsetAttributes();  // clear any default values
+        $dataProvider = $model->searchByBarcode($barcode_id);
+        $this->render('index', array(
+            'dataProvider' => $dataProvider,
+        ));        
+	}
+    
     /**
      * Manages all models.
      */

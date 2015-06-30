@@ -10,6 +10,6 @@ array('label'=>'Manage Issue','url'=>array('admin')),
 );
 ?>
 
-<h1>Create Issue</h1>
+<center><h1><b>Form Peminjaman</b></h1></center>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

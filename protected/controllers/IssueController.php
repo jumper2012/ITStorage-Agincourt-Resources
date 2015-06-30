@@ -136,6 +136,36 @@ class IssueController extends Controller {
         ));
     }
 
+    public function actionCekNamaProduk() {
+        $id_barcode = $_POST['Issue']['barcode_id'];
+        $result = Yii::app()->db->createCommand("SELECT nama_barang FROM produk WHERE `barcode_id`= '$id_barcode'")->queryAll();
+        $nama=$result["0"]["nama_barang"];
+        $result_sn = Yii::app()->db->createCommand("SELECT serial_number FROM item WHERE `barcode_id`= '$id_barcode'")->queryAll();
+        $counter=0;
+        $temp = array();
+        foreach ($result_sn as $abc) {
+            $temp[$counter]=$abc["serial_number"];
+            $counter++;
+        }
+//        for($a=0;$a<$counter;$a++)
+//        {
+//            echo $temp[$a]."<br>";
+//            //echo CHtml::tag('option', array('value' => $temp[$a]), CHtml::encode($temp[$a]), true);
+//        }
+        ?><FONT SIZE="4"><center>Nama Barang : </FONT><br><FONT SIZE="5"><B><?php echo $nama;?></B>
+        </FONT><center>
+            <br><?php
+            if($counter!=0)
+            {
+                ?><font size="3"><b><?php echo "Jumlah Available : ".$counter;?></b></font><?php
+            }
+            else
+            {
+                ?><font size="3"><b><?php echo "Stock Tidak Ada";?></b></font><?php
+            }
+
+    }
+        
     /**
      * Returns the data model based on the primary key given in the GET variable.
      * If the data model is not found, an HTTP exception will be raised.
@@ -147,7 +177,7 @@ class IssueController extends Controller {
             throw new CHttpException(404, 'The requested page does not exist.');
         return $model;
     }
-
+    
     /**
      * Performs the AJAX validation.
      * @param CModel the model to be validated
