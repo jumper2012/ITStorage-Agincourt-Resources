@@ -74,6 +74,7 @@ $form = $this->beginWidget(
     </TR>
     <TR>
         <TD colspan="3">
+            <hr>
             <?php
             echo $form->datePickerGroup($model, 'tanggal', array('widgetOptions' => array('options' => array(
                         'showButtonPanel' => true,

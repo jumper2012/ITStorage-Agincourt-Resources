@@ -3,11 +3,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/ITStorage_yii1.v1/protected/views/item/admin.php</file>
-            <file>file:/C:/xampp/htdocs/ITStorage_yii1.v1/protected/models/Produk.php</file>
-            <file>file:/C:/xampp/htdocs/ITStorage_yii1.v1/protected/controllers/ItemController.php</file>
-            <file>file:/C:/xampp/htdocs/ITStorage_yii1.v1/themes/hebo/views/layouts/tpl_navigation.php</file>
-            <file>file:/C:/xampp/htdocs/ITStorage_yii1.v1/protected/views/produk/admin.php</file>
+            <file>file:/C:/xampp/htdocs/ITStorage_yii1.v1/protected/views/issue/_form.php</file>
+            <file>file:/C:/xampp/htdocs/ITStorage_yii1.v1/protected/controllers/IssueController.php</file>
         </group>
     </open-files>
 </project-private>
